@@ -7,10 +7,13 @@
 //若赋初始值只能给一个很大和很小的值，否则当输入大于或小于最大值和，最小值时结果会有错误
 
 #include <stdio.h>
+#include <iostream>
+#define iNf  1000000000;
 int main()
 {
-	int iNf = 1000000000;
+#if 0
 	int x = 0;
+	int n = 0;
 	float sum = 0;
 	int max = -iNf;
 	int min = iNf;
@@ -25,9 +28,36 @@ int main()
 		{
 			min = x;
 		}
-		
+		n++;
 	}
 	printf_s("max:%d\nmin:%d\nmin:%.2f\n", max, min, sum);
+#else if
+	FILE *fin, *fout;
+	fopen_s(&fin,"./data.in","rb");
+	fopen_s(&fout ,"./data.out", "wb");
+	int x = 0;
+	int n = 0;
+	int	max = -iNf;
+	int min = iNf;
+	int sum = 0;
+	while (fscanf_s(fin,"%d", &x) == 1) 
+	{
+		sum += x;
+		if (x >= max)
+		{
+			max = x;
+		}
+		if (x < min)
+		{
+			min = x;
+		}
+		n++;
+
+	}
+	fprintf(fout, "%d %d %.3f", min, max,(double)sum / n);
+	fclose(fin);
+	fclose(fout);
+#endif
 	scanf_s("%d",&x);
 	return 0;
 }
