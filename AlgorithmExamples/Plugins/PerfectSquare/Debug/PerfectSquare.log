@@ -1,0 +1,4 @@
+﻿  源.cpp
+e:\git\algorithmexamples\algorithmexamples\plugins\perfectsquare\源.cpp(15): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  PerfectSquare.vcxproj -> E:\git\AlgorithmExamples\AlgorithmExamples\Debug\PerfectSquare.exe
+  PerfectSquare.vcxproj -> E:\git\AlgorithmExamples\AlgorithmExamples\Debug\PerfectSquare.pdb (Partial PDB)
