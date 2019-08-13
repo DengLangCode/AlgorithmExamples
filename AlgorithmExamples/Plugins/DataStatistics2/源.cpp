@@ -1,40 +1,43 @@
 #include <stdio.h>
-#include <stdlib.h>
-#define INF 1000000000
+#define  Max 100000
 int main()
 {
-	int x =0;
-	int n = 0;
-	int min = INF;
-	int max = -INF;
-	int sum = 0;
-	int ksae = 0;
-	while (scanf_s("%d", &n) ==1 && n)  
-	//循环放入n中;当输入遇到0时跳出循环，若n=0则函数循环结束
-	//调试证明：&&逻辑运算符中；程序总是先执行前一个表达式再执行后面一个表达式
+	int iScanfNum = 0;
+	int iCsae = 0;
+	while (scanf_s("%d",&iScanfNum) == 1 && iScanfNum)//是否获取道正确的个数
 	{
-		int s = 0;
-		for (int i = 0; i < n ; i++)
+		if (iScanfNum <= 0)
 		{
-			scanf_s("%d", &x);
-			s += x;
-			if (x<min)
-			{
-				min = x;
-			}
-			if (x>max)
-			{
-				max = x;
-			}
-			if (ksae)
-			{
-				printf_s("\n");
-			}
-			printf_s("Case %d:max=%d min=%d aver=%.3f\n", ++ksae,max, min, (double)s / n);
+			printf("please input correct data number\n");
+			continue;
 		}
-		
-		
+		int iSum = 0;
+		int iRealDataNum = 0;
+		int iGetNum;
+		int iMax = -Max; //最大值与一个很小的值比较
+		int iMin = Max; //最小值与一个很大的值比较
+		for (int i = 0; i < iScanfNum;i++)
+		{
+			if (scanf_s("%d", &iGetNum) == 1 && iGetNum) //以零结束
+			{
+				iSum += iGetNum;
+				iRealDataNum++;
+				if (iGetNum >iMax)
+				{
+					iMax = iGetNum;
+				}
+				if (iGetNum <iMin)
+				{
+					iMin = iGetNum;
+				}
+			}
+			else
+			{
+				break; 
+			}
+		}
+		printf("case %d:sum = %d RealNum = %d Average = %f Max = %d Min = %d\n", ++iCsae,iSum, iRealDataNum, double(iSum / iRealDataNum),iMax,iMin);
 	}
-	system("pause");
-	return 0;
+	
+	
 }
