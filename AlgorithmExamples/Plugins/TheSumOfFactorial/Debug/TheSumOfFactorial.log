@@ -1,4 +1,3 @@
 ﻿  源.cpp
-e:\git\algorithmexamples\algorithmexamples\thesumoffactorial\源.cpp(7): warning C4018: “<=”: 有符号/无符号不匹配
   TheSumOfFactorial.vcxproj -> E:\git\AlgorithmExamples\AlgorithmExamples\Debug\TheSumOfFactorial.exe
   TheSumOfFactorial.vcxproj -> E:\git\AlgorithmExamples\AlgorithmExamples\Debug\TheSumOfFactorial.pdb (Partial PDB)
