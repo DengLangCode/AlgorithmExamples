@@ -1,0 +1,5 @@
+﻿  源.cpp
+e:\git\algorithmexamples\algorithmexamples\plugins\openlight\源.cpp(11): warning C4018: “<=”: 有符号/无符号不匹配
+e:\git\algorithmexamples\algorithmexamples\plugins\openlight\源.cpp(13): warning C4018: “<=”: 有符号/无符号不匹配
+  OpenLIght.vcxproj -> E:\git\AlgorithmExamples\AlgorithmExamples\Debug\OpenLIght.exe
+  OpenLIght.vcxproj -> E:\git\AlgorithmExamples\AlgorithmExamples\Debug\OpenLIght.pdb (Partial PDB)
