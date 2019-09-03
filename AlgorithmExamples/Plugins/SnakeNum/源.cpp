@@ -17,7 +17,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#define Max 8
+#include <stdlib.h>
+#define Max 4
 int main()
 {
 	int iScanf = 0;
@@ -26,25 +27,34 @@ int main()
 		int Sank[Max][Max];
 		memset(Sank, 0, sizeof(Sank));//养成开辟开间和声明变量时先初始化的好习惯
 		int iTotal = 0;
-		for (int i = 0; i < iScanf - 1; i++)//给右侧最后一列赋值
+		int iRow = 0; //行
+		int iRank = iScanf - 1; //列
+		Sank[iRow][iRank] = ++iTotal;
+		while(iTotal < iScanf*iScanf) //不能等于，会多执行一次
 		{
-			Sank[i][iScanf - 1] = ++iTotal;
+			while(iRow + 1 < iScanf && !Sank[iRow+1][iRank])//给右侧赋值
+				//!Sank[iRow - 1][iRank]代表这个位置没有被填过，仍然为0
+				//不能直接--的原因是后面需要--;
+			{
+				Sank[++iRow][iRank] = ++iTotal;
+			}
+			while (iRank - 1 >= 0 && !Sank[iRow][iRank-1])//给底部赋值
+			{
+				Sank[iRow][--iRank] = ++iTotal;
+			}
+			while (iRow - 1 >= 0 && !Sank[iRow-1][iRank])//给左侧赋值
+			{
+				Sank[--iRow][iRank] = ++iTotal;
+			}
+			while (iRank + 1<iScanf && !Sank[iRow ][iRank+1])//给顶部赋值
+			{
+				Sank[iRow][++iRank] = ++iTotal;
+			}
 		}
-		for (int j = iScanf - 1; j <= 0 ; j--)//给底部最后一行赋值
+		
+		for (int iLine = 0; iLine < iScanf; iLine++)
 		{
-			Sank[iScanf - 1][j] = ++iTotal;
-		}
-		for (int k = iScanf - 1; k <= 0; k--)//给左侧第一列赋值
-		{
-			Sank[0][k] = ++iTotal;
-		}
-		for (int l = 0; l < iScanf ; l--)//给顶部第一行赋值
-		{
-			Sank[0][l] = ++iTotal;
-		}
-		for (int iLine = 0; iLine < iScanf*iScanf; iLine++)
-		{
-			for (int iColunm = 0; iColunm < iScanf*iScanf; iColunm++)
+			for (int iColunm = 0; iColunm < iScanf; iColunm++)
 			{
 				printf_s("%3d", Sank[iLine][iColunm]);
 			}
@@ -52,6 +62,6 @@ int main()
 		}
 
 	}
-
+	system("Pause");
 	return 0;
 }

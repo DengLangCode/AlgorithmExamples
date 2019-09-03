@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SnakeNum", "Plugins\SnakeNu
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Release", "Plugins\Release\Release.vcxproj", "{61834D01-847F-4D74-AF12-AED99F134917}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TicppXml", "Plugins\TicppXml\TicppXml.vcxproj", "{5D902E97-C8B4-4A47-8B29-FA1FF456ED01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -211,6 +213,14 @@ Global
 		{61834D01-847F-4D74-AF12-AED99F134917}.Release|x64.Build.0 = Release|x64
 		{61834D01-847F-4D74-AF12-AED99F134917}.Release|x86.ActiveCfg = Release|Win32
 		{61834D01-847F-4D74-AF12-AED99F134917}.Release|x86.Build.0 = Release|Win32
+		{5D902E97-C8B4-4A47-8B29-FA1FF456ED01}.Debug|x64.ActiveCfg = Debug|x64
+		{5D902E97-C8B4-4A47-8B29-FA1FF456ED01}.Debug|x64.Build.0 = Debug|x64
+		{5D902E97-C8B4-4A47-8B29-FA1FF456ED01}.Debug|x86.ActiveCfg = Debug|Win32
+		{5D902E97-C8B4-4A47-8B29-FA1FF456ED01}.Debug|x86.Build.0 = Debug|Win32
+		{5D902E97-C8B4-4A47-8B29-FA1FF456ED01}.Release|x64.ActiveCfg = Release|x64
+		{5D902E97-C8B4-4A47-8B29-FA1FF456ED01}.Release|x64.Build.0 = Release|x64
+		{5D902E97-C8B4-4A47-8B29-FA1FF456ED01}.Release|x86.ActiveCfg = Release|Win32
+		{5D902E97-C8B4-4A47-8B29-FA1FF456ED01}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
